@@ -1,0 +1,33 @@
+<div class="w-screen h-screen flex justify-center items-center">
+    <div class="bg-white p-3 drop-shadow-2xl rounded-lg border">
+        <h1 class="text-center font-semibold uppercase">Create Account</h1>
+        <%- include('./partials/message') %>
+            <form action="/user/register" method="post">
+                <div class="w-80 flex md:flex-col flex-row">
+                    <label for="username">UserName</label>
+                    <input type="text" name="username" id="username"
+                        class="outline-none border focus:border-blue-600 focus:drop-shadow-2xl rounded-lg p-1">
+                </div>
+                <div class="w-80 flex md:flex-col flex-row">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email"
+                        class="outline-none border focus:border-blue-600 focus:drop-shadow-2xl rounded-lg p-1">
+                </div>
+                <div class="w-80 flex md:flex-col flex-row">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password"
+                        class="outline-none border focus:border-blue-600 focus:drop-shadow-2xl rounded-lg p-1">
+                </div>
+                <div class="w-80 flex md:flex-col flex-row">
+                    <label for="c_password">Confirm Password</label>
+                    <input type="password" name="c_password" id="c_password"
+                        class="outline-none border focus:border-blue-600 focus:drop-shadow-2xl rounded-lg p-1">
+                </div>
+                <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-800 text-white rounded-lg p-1 mt-3">Register</button>
+            </form>
+            <a href="/user/login" class="text-sm hover:text-blue-400 mt-3 block text-center">Have Account ?
+                Log
+                In</a>
+    </div>
+</div>

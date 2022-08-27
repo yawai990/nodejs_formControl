@@ -1,0 +1,36 @@
+<% if(typeof errors !=='undefined' ) { %>
+    <% errors.forEach(err=> { %>
+        <div class="bg-red-300 rounded-lg p-1 flex justify-between items-center my-1">
+            <p>
+                <%= err.message %>
+            </p>
+            <button>close</button>
+        </div>
+        <% }) %>
+            <% } %>
+
+                <% if(success !=='' ) { %>
+                    <div>
+                        <p>
+                            <%= success %>
+                        </p>
+                    </div>
+                    <% } %>
+
+                        <% if(fail !=='' ) { %>
+                            <div>
+                                <p>
+                                    <%= fail %>
+                                </p>
+                            </div>
+                            <% } %>
+
+                                <% if(locals.errors) { %>
+                                    <% errors.forEach(function(err){ %>
+                                        <div class="this is local erro">
+                                            <p>
+                                                <%= err.message %>
+                                            </p>
+                                        </div>
+                                        <% }); %>
+                                            <% } %>
