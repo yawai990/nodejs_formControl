@@ -1,0 +1,26 @@
+<nav class="w-screeen h-15 bg-blue-600 text-white flex justify-around items-center p-2">
+    <a href="/">
+        <h1>Book Store</h1>
+    </a>
+
+
+    <div class="flex items-center gap-2">
+        <a href="/dashboard" class="hover:bg-blue-300 p-2 rounded-lg">Home</a>
+        <a href="/about" class="hover:bg-blue-300 p-2 rounded-lg">About</a>
+        <a href="/contact" class="hover:bg-blue-300 p-2 rounded-lg">Contact</a>
+    </div>
+
+    <div class="flex items-center gap-2">
+        <div class="flex items-center gap-1">
+            <img src="../../public//img//react.png" alt="profile"
+                class="w-10 h-10 rounded-full border border-gray-400 object-cover">
+            <p class="capitalize font-semibold tracking-wide font-sans">
+                <%= userData.username %>
+            </p>
+        </div>
+        <form action="/user/logout?_method=DELETE" method="post">
+            <button type="submit" class="rounded-lg bg-red-500 p-1 hover:bg-red-700 hover:drop-shadow-xl">Log
+                Out</button>
+        </form>
+    </div>
+</nav>

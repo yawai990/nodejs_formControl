@@ -12,6 +12,9 @@ module.exports =function(passport){
                                         return done(null,false,{message:'Email is not registered'})
                                     }
                                     else{
+                                        if(!password){
+                                            return done(null,fail,{message:'please fill the correct password'})
+                                        }
                                         //compare the password
                                         bcrypt.compare(password,user.password,(err,isMatch)=>{
                                             if(!isMatch){
@@ -27,7 +30,6 @@ module.exports =function(passport){
                         passport.serializeUser((user,done)=>done(null,user));
 
                         passport.deserializeUser(function(user,done){
-                           
                             userModel.findById(user._id,(err,user)=>done(err,user));
                         });
 };

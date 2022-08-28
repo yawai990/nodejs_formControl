@@ -13,5 +13,9 @@ userRouter.get('/login',loginForm)
                     })(req, res, next);
                   })
                   .post('/register',registerUser)
+                  .delete('/logout',(req,res,next)=>{
+                    req.logOut(err=>next(err))
+                    res.redirect('/user/login')
+                  })
 
 module.exports = userRouter;

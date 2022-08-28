@@ -25,12 +25,15 @@
                             </div>
                             <% } %>
 
-                                <% if(locals.errors) { %>
-                                    <% errors.forEach(function(err){ %>
-                                        <div class="this is local erro">
+                                <% if(locals.error) { %>
+                                    <% error.forEach(function(err){ %>
+                                        <div class="flex justify-between w-full items-center bg-red-400 text-white p-1 rounded-lg">
                                             <p>
-                                                <%= err.message %>
+                                                <%= err %>
                                             </p>
+                                            <button class="block bg-black cursor-pointer">
+                                                close
+                                            </button>
                                         </div>
                                         <% }); %>
                                             <% } %>
